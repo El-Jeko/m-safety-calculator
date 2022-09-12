@@ -1,6 +1,6 @@
 <?php
 
-require_once('/var/www/u1181503/data/www/m-safety.ru/core/model/modx/mail/phpmailer/PHPMailerAutoload.php');
+require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer();
 $mail->CharSet = 'utf-8';
 
