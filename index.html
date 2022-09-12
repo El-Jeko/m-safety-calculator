@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator_mob.css">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Калькулятор</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="note-container">
+            <p class="note-text">*Для расчета систем с количеством камер более 16-и штук обратитесь к менеджеру.</p>
+            <p class="note-text">**Предварительный расчет производится для бюджетной системы видеонаблюдения с качеством
+                изображения FullHD(2Mp): 10м
+                кабеля/1 камера.</p>
+        </div>
+        <form class="form-calculator" action="https://send.m-safety.ru/mail.php" method="POST">
+            <div class="range-container">
+                <div class="cameras-container">
+                    <p class="heading">Количество желаемых камер, (шт.)</p>
+                    <div class="cam-field-container">
+                        <input class="input-field camera-count" name="camera-count" type="range" min="1" max="16"
+                            value="1">
+                        <output class="output-camera">1</output>
+                    </div>
+
+                </div>
+                <div class="archive-container">
+                    <p class="heading">Размер желаемого архива, (дн.)</p>
+                    <div class="arch-field-container">
+                        <input class="input-field archive-count" name="archive-count" type="range" min="0" max="180"
+                            value="0">
+                        <output class="output-archive">0</output>
+                    </div>
+                </div>
+            </div>
+            <div class="equip-price-container">
+                <p class="heading">Минимальная стоимость оборудования (бюджетный вариант):</p>
+                <input class="hidden-quipprices" type="hidden" name="camera-cost" value="0">
+                <output class="output-field equipprices-field">0</output>
+            </div>
+            <div class="work-price-container">
+                <p class="heading">Стоимость работ:</p>
+                <input class="hidden-workprice" type="hidden" name="archive-cost" value="0">
+                <output class="output-field workprice-field">0</output>
+            </div>
+            <div class="contacts-container">
+                <p class="heading contacts-heading">Вы можете получить подробное коммерческое предложение по
+                    произведенному Вами расчету. Для этого укажите вашу почту, номер телефона и наш специалист свяжется
+                    с Вами:
+                </p>
+                <div class="input-container">
+                    <input class="contact-input js_input _email" type="text" name="email" id="email"
+                        placeholder="Ваш e-mail*:">
+                    <input class="contact-input js_input _phone" type="text" name="phone-number" id="number"
+                        placeholder="Ваш номер*:">
+                </div>
+            </div>
+            <div class="total-price-container">
+                <p class="heading">ИТОГО СТОИМОСТЬ СИСТЕМЫ ВИДЕОНАБЛЮДЕНИЯ ПОД КЛЮЧ:</p>
+                <input class="hidden-totalprice" type="hidden" name="total-cost" value="0">
+                <output class="output-field totalprice-field">0</output>
+            </div>
+            <div class="submit-btn-container">
+                <input class="form-submit-btn" type="submit" name="submit-btn" id="submit-btn" value="ОТПРАВИТЬ">
+                <div class="btn-shadow"></div>
+            </div>
+            <div class="checkbox-container">
+                <input class="agreement-checkbox _checkbox" type="checkbox" name="agreement" id="agreement" checked>
+                <label class="agreement-label" for="agreement">
+                    <span>
+                        Нажимая на кнопку "ОТПРАВИТЬ" Вы соглашаетесь на обработку персональных данных в соответствии с <a class="agreement-link" href="https://m-safety.ru/privacy/" target="_blank" rel="nofollow noopener noreferrer">политикой конфиденциальности</a>
+                    </span>
+                </label>
+            </div>
+        </form>
+    </div>
+
+    <script src="calculator.js"></script>
+    <script src="validation-form.js"></script>
+</body>
+
+</html>

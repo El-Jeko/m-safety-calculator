@@ -1,0 +1,16 @@
+@media (max-width: 480px) {
+    .main-container {
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    ._email {
+        margin-bottom: 15px;
+    }
+}
